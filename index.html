@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>CampK12</title>
+  
+  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+<link rel='stylesheet' href='https://rawgithub.com/alvarotrigo/pagePiling.js/master/jquery.pagepiling.css'>
+
+      <!-- <link rel="stylesheet" href="css/style.css"> -->
+<style>
+     #arrow {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border: 0;
+    outline: 0;
+    z-index: 100;
+    color: #BBB;
+    background: #2ac4ea;
+    -moz-transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
+    -o-transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
+    -webkit-transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
+    transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
+    font: 36px Heiti, 'Lucida Grande', Arial;
+    font-weight: bold;
+}
+#arrow span {
+    display: inline-block;
+    position: relative;
+    color: #FFF;
+    top: -5px;
+    -moz-transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
+    -o-transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
+    -webkit-transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
+    transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
+}
+#arrow:hover span {
+    top: 0px;;
+}
+.jointCompany{
+    margin-top:7%;
+    /* margin-left: 35%; */
+}
+.young{
+    /* margin-left:25%; */
+}
+.textp{
+    color: white;
+    padding: 1%;
+    text-align: center;
+}
+.flex-container1{
+    display: flex;
+    justify-content: center;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.flex-container2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.flex-container2 > h1,p,iframe{
+
+}
+.flex-container3{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.flex-container > .buttonfp,.buttondelhi,.buttonmumbai {
+     margin:1% 3% 2% 3%;width: 175px;height: 50px;;border-radius: 6px;border: 0px;cursor: pointer;font-size: 17px;
+}
+.youtubeVideo{
+    width:700px;
+    height: 400px;
+    float: middle;  
+}
+.head1{text-align: center;font-size: 18px;margin-top: 5%;}
+.sbutton{
+    background-color: #ff41b4;
+    padding: 2%;
+    text-decoration: none;
+    color: #000;
+    border-radius:5px; 
+}
+h1{text-align:center;}
+#learners, #wise{
+    margin-left:1%;
+    margin-right: 1%;
+    padding: 0 1.5% 0 1.5%;
+    cursor: pointer;
+}
+#section6 .active {
+    background-color: #2ac4ea;
+    transition-duration: 800ms; 
+    color: white;
+}
+.card{
+    background-color: #ff41b4ab;
+    color: white;
+    margin: 2% ;
+}
+.learn{
+    display: none;
+    transition-duration: 800ms;
+}
+#section7{
+    padding-top: 15%;
+}
+.hidden{
+    display: none;
+}
+.visible{
+    display: block;
+}
+@media only screen and (max-width:460px){
+    .jointCompany{
+        width: 70%;
+        /* margin-left: 13%; */
+        margin-top: 5%;
+    }
+    .young{
+        width: 85%;
+        /* margin-left: 7%; */
+    }
+    .youtubeVideo{
+    margin-top: 5%;
+    width:320px;
+    height: 180px;
+    }
+    #nouse{
+        display: none;
+    }
+    .head1{margin-top: 10%;}
+    h1{font-size: 18px;}
+    #learn .none{
+        display: none;
+    }
+    #section7{
+        padding-top: 0;
+    }
+}
+</style>
+        <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans">
+</head>
+
+<body style="font-family:'Open Sans',sans-serif;">
+
+<div id="pagepiling">
+    <div class="section" id="section1">
+        <div class="intro" style="background-color: rgb(0, 0, 0);background-image: url(https://campk12.com/wp-content/uploads/2014/06/bannerModified-2.png);height: 100%;overflow: visible;">
+            <span >
+                    <a id="logo" href="index.html" style="padding-top:2%; display: flex;justify-content: center;" >		
+                            <img class='hidden' alt="Camp K12" src="https://campk12.com/wp-content/uploads/2016/04/ck12-logo-dark.png" /><img class="visible" src="https://campk12.com/wp-content/uploads/2016/04/ck12-logo-light-whiteoutline-retina-v2.png"> 
+                        </a>
+                <div class="flex-container1"><img id="logo1" class="jointCompany" src="https://campk12.com/wp-content/uploads/2014/06/iimbLogo.jpg"><br></div>>
+                    <div class="flex-container1">><img class="young " id="logo2" src="https://campk12.com/wp-content/uploads/2014/06/youngApperLogo.jpg"><br></div>>
+                    <p class="textp">Entrepreneurship and App Development program for school students</p>  
+                    <div class="flex-container">
+                    <button class="buttonfp" id="iimb-button">More about <br>IIMB program</button>
+                    <button id="delhi-button" class="buttondelhi">Delhi Courses</button>
+                    <button id="mumbai-button" class="buttonmumbai">Mumbai Courses</button></div></span>
+        </div><button id="arrow">	<span>↓</span></button>
+    </div>
+    <div class="section" id="section2">
+
+        <div class=" flex-container2" style="margin-top:5%;">
+            	<h1 class="head1">We&#8217;re building young innovators in India.</h1>
+                <p style="text-align: center;padding: 2%;">We teach coding, app development, and other creative technologies to primary, middle, and senior school students across the nation during vacations and weekends. One camp at a time, we hope to inspire the next generation of innovators and tech entrepreneurs in the country.</p>
+                <div style="display:flex;justify-content:center;"><iframe class="youtubeVideo" src="https://www.youtube.com/embed/vSd3jiAmIao?feature=oembed" frameborder="0" allowfullscreen></iframe>
+           </div> </div>
+    </div>
+    <div class="section" id="section3">
+        <div class="flex-container3">
+             <h1></h1>
+             <div style="display:flex;justify-content:center;margin-top:0%!important;">
+                    <iframe class="youtubeVideo" style="margin-top:0%;" src="https://www.youtube.com/embed/crRPXRfVeZg?feature=oembed" frameborder="0" allowfullscreen></iframe>
+             </div>
+             <div style="text-align:center">
+                 <h2 style="text-align:center;font-size:18px;">Don&#8217;t just play games &#8212; make them.</h2>
+                 <p style="text-align:center;padding: 0 1.5% 0 1.5%;margin:10px 0 10px 0;">We know you love technology. You listen to music, play games online and on your phones, and browse websites all day long. At Camp K12, we take your relationship with Technology to a whole new level by transforming you into a creator rather than a user of these things.Don&#8217;t just play games, make them. Don&#8217;t just listen to Avicci and Hardwell, make your own EDM. Make your own movies, animations, designs, and mobile apps, because you can, and because it&#8217;s fun to be able to turn your ideas into reality. Come build with us.</p>
+                 <button class="sbutton"><a style="color:#fff;text-decoration:none;font-weight: bold;" href="https://campk12.com/courses"><span>I'm excited, show me the courses</span></a>   
+                 </button></div>
+        </div>
+    </div>
+    <div class="section" id="section4">
+            <div class="flex-container3">
+                    <h1></h1>
+                    <div style="text-align:center">
+                        <h2 style="text-align:center;font-size:18px;">Start young and build often.</h2>
+                        <p style="text-align:center;padding: 0 1.5% 0 1.5%;margin:10px 0 10px 0;">Some say it&#8217;s &#8220;never too late&#8221; to start, but at Camp K12 we believe it&#8217;s never too early. We chose to build our courses for KG &#8211; 12 students (hence the K12 in our name) rather than colleges because frankly, college is too late. Our goal is to work with impressionable young minds and to inculcate in them the healthy habits of problem solving and creativity. We want students in Indian schools to develop a sense of confidence in their abilities to create and an addiction to innovation &#8212; a muscle memory for building apps.</p>
+                        <button class="sbutton"><a style="color:#fff;text-decoration:none;font-weight: bold;" href="https://campk12.com/courses"><span>Gallery</span></a>   
+                        </button>
+                    </div>
+                    <div style="display:flex;justify-content:center;margin-top:0%!important;">
+                            <img class="youtubeVideo" style="margin-top:1.5%;" src='https://campk12.com/wp-content/uploads/2015/09/HomePageGroupPhotosCollection_Width10001.jpg'></img>
+                     </div>
+            </div>
+    </div>
+    
+    <div class="section" id="section5">
+            <div class="flex-container3">
+                    <h1></h1>
+                     <div style="display:flex;justify-content:center;margin-top:0%!important;">
+                            <img class="youtubeVideo" style="margin-top:1.5%;" src='https://campk12.com/wp-content/uploads/2015/09/HomePage_LearnByDoingPhotoCollage1.jpg'></img>
+                     </div>
+                     <div style="text-align:center">
+                            <h2 style="text-align:center;font-size:18px;">Learn by doing — our curriculum and approach</h2>
+                            <p style="text-align:center;padding: 0 1.5% 0 1.5%;margin:10px 0 10px 0;">Our curriculum was designed by our founder during his five years at MIT (Massachusetts Institute of Technology, USA) and has been implemented successfully in academic institutions across the world, including in Italy, Brazil, Kenya, China, and the United States. Campers complete multiple exciting projects right from day one, and work their way up to a Final Project which they showcase to their parents, teachers, and school principal on the final day of the camp.Our campers work on projects for causes and organizations they are passionate about or that solve real-world problems.</p>
+                        </div>
+            </div>
+    </div>
+    <div class="section" id="section6">
+        <div class="intro" style="display:flex;flex-direction:row;justify-content: center;">
+            <div id='wise' class="active " onclick="changeTextW(this)"><h1 >In the Words of the Wise</h1></div>
+            <div id="learners" onclick="changeTextL(this)"><h1 >In the words of the learners</h1></div>   
+        </div>
+        <div class="teach " id="teach"><div class="card teach1" style=" overflow: auto;">
+            <p style="text-align: justify; padding: 2% 5% 0 5%"><q>Camp K12 ignited the minds of our students, creating in them eagerness to learn and the curiosity to try a variety of approaches. From creating an animation movie to designing one’s own website, students learnt effective ways to use the Internet with responsibility. There was a quantitative leap in the realization that far from being a mere medium of social interaction, the Internet and digitization were tools for the imagination and creativity.</q></p>
+            <p style="float:right;margin: 0 5% 1% ">Mrs. Meera Isaacs<br>Principal, Cathedral & John Connon School</p>
+        </div>
+        <div class="card teach1" style=" overflow: auto;" id='nouse'>
+                <p style="text-align: justify; padding: 2% 5% 0 5%"><q>Our experience with Camp K12 has been a very positive one. They offer a unique blend of hands-on education and fun for the campers, and their bright and young instructors are able to connect with our students in ways that few others can. Through just a single 40 hour course, Camp K-12 shared with our students the exciting process of creative creation and transformed them into dedicated innovators.</q></p>
+                <p style="float:right;margin: 0 5% 1% ">Mr. Sathish Jayarajan<br>Principal, Mallya Aditi International School</p>
+        </div>
+        <div style="text-align:center;" class="teach1">
+            <a class="card" style="font-weight:bold;text-sixe:18px;text-align:center;padding: 1% ">See more testimonials –></a>      
+        </div></div>
+        <div class="learn " id="learn">
+            <div class="card learn1" style=" overflow: auto;">
+                <p style="text-align: justify; padding: 2% 5% 0 5%"><q>This was the most Creative Holiday I have had, Thanks to Camp K-12.</q></p>
+                <p style="float:right;margin: 0 5% 1% ">&minus;Karam Poddar, The International School Bangalore (TISB)</p>
+            </div>
+            <div class="card learn1" style=" overflow: auto;">
+                    <p style="text-align: justify; padding: 2% 5% 0 5%"><q>Camp K12 was one of the best learning experiences of my life so far. The material taught by them is relevant and unique at the same time.</q></p>
+                    <p style="float:right;margin: 0 5% 1% ">&minus;Kush Agarwal, DPS RK Puram</p>
+            </div>
+            <div class="card learn1" style=" overflow: auto;">
+                    <p style="text-align: justify; padding: 2% 5% 0 5%"><q>40 hrs and Game Development… it was a dream come true at Camp K12.</q></p>
+                    <p style="float:right;margin: 0 5% 1% ">&minus;Saket Venkatesh, Cathedral School, Mumbai</p>
+            </div>
+            <div class="card none learn1" style=" overflow: auto;">
+                    <p style="text-align: justify; padding: 2% 5% 0 5%"><q>I was until today confused about what to do in life. Now after attending Camp K12 course on Java Game Programming, I am inspired to continue creative work. Also, my instructor was a great source of inspiration.</q></p>
+                    <p style="float:right;margin: 0 5% 1% ">&minus;Anuj Bhitocha, Mallya Aditi International School, Bangalore</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="section pp-scrollable" id="section7" style="overflow:hidden; color: white;">
+        <div class="content" style="display:flex;flex-direction:row;flex-wrap: wrap;justify-content: space-around;">
+            <div style="margin-left:5px;"><ul style="font-weight:bold; border-bottom: 2px solid #29b3d5;">ADDITIONAL LINKS</ul><ul>Contact Us</ul><ul>testimonials</ul><ul>Internships for<br>college students</ul><ul>Full-time careers</ul></div>
+            <div style="margin-left:5px;"><ul style="font-weight:bold; border-bottom: 2px solid #29b3d5;">CAMP K12 POLICIES</ul><ul>Terms and Conditions</ul><ul>Privacy Policy</ul><ul>Cancellation and<br> Refund policy</ul></div>
+            <div style="margin-left:5px;"><ul style="font-weight:bold; border-bottom: 2px solid #29b3d5;">HOW TO REACH US</ul><ul><b>Address:</b> 90, Sector 43,<br>Golf Course Road,<br>Gurgaon 122002,<br>India</ul><ul><b>Email:</b> info@campk12.com</ul></div>
+            <div style="margin-left:5px;"><ul style="font-weight:bold; border-bottom: 2px solid #29b3d5;">SIGN UP FOR UPDATES!</ul><ul>Email address: <input type='email' placeholder="Your Email-id here"></ul><ul><a class='sbutton' style="margin-top: 2%;color: white;">sign up!</a></ul></div>
+        </div>
+        <p style="margin: 2% 0 0 4%;">© 2018 Camp K12. All Rights Reserved.</p>
+        
+    </div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+<script src='https://rawgit.com/alvarotrigo/pagePiling.js/master/jquery.pagepiling.min.js'></script>
+
+  
+
+    <script  src="try.js"></script>
+    <script>    
+        function changeTextW(div){
+            // console.log(div);
+            div.classList.add("active");
+            document.getElementById('learners').classList.remove('active');
+            document.getElementById('teach').style.display='block';
+            document.getElementById('learn').style.display='none';
+        }
+         function changeTextL(div){
+            // console.log(div);
+            div.classList.add("active");
+            document.getElementById('wise').classList.remove('active');
+            document.getElementById('teach').style.display='none';
+            document.getElementById('learn').style.display='block';
+            document.getElementsByClassName('teach1').style.transitionDuration='3000ms';
+            document.getElementsByClassName('learn1').style.transitionDuration='3000ms';
+        }
+        
+    </script>
+
+
+
+</body>
+
+</html>
